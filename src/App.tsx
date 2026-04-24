@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import heroImage from "./assets/hero.png";
 import coinsIcon from "./assets/icons/coins.png";
@@ -12,8 +11,6 @@ import stripeLogo from "./assets/logo-wall/stripe.png";
 const partnerLogos = [paypalLogo, mastercardLogo, visaLogo, stripeLogo];
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <main className="page" id="home">
       <section className="hero">
