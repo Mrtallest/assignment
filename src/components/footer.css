@@ -1,0 +1,29 @@
+.footer {
+  background: #111;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  color: gray;
+}
+
+.footer-links span {
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: gray;
+  font-size: 14px;
+}

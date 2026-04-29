@@ -1,46 +1,20 @@
-import { useState } from "react";
-import logo from "../assets/logos/kobodrop_logo.svg";
 import "./navbar.css";
+import logo from "../assets/logos/kobodrop_logo.svg";
 
-function Navbar() {
-  const [openMenu, setOpenMenu] = useState(false);
-
+export default function Navbar() {
   return (
-    <header className="nav-wrap">
-      <nav className="nav-box">
-        <a className="nav-logo" href="#home" onClick={() => setOpenMenu(false)}>
-          <img src={logo} alt="kobodrop logo" />
-        </a>
+    <nav className="navbar">
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
 
-        <button
-          type="button"
-          className="menu-button"
-          onClick={() => setOpenMenu(!openMenu)}
-          aria-label="toggle menu"
-        >
-          {openMenu ? "Close" : "Menu"}
-        </button>
+      <ul className="nav-links">
+        <li>Learn</li>
+        <li>Resources</li>
+        <li>FAQs</li>
+      </ul>
 
-        <div className={openMenu ? "nav-links show-links" : "nav-links"}>
-          <a href="#home" onClick={() => setOpenMenu(false)}>
-            Home
-          </a>
-          <a href="#feature" onClick={() => setOpenMenu(false)}>
-            Features
-          </a>
-          <a href="#security" onClick={() => setOpenMenu(false)}>
-            Security
-          </a>
-          <a href="#partners" onClick={() => setOpenMenu(false)}>
-            Partners
-          </a>
-          <a className="join-link" href="#download" onClick={() => setOpenMenu(false)}>
-            Open account
-          </a>
-        </div>
-      </nav>
-    </header>
+      <button className="install-btn">Install Kobodrop</button>
+    </nav>
   );
 }
-
-export default Navbar;

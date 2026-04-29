@@ -1,0 +1,17 @@
+.integrations {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.integrations h2 {
+  margin-bottom: 20px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: gray;
+  font-weight: bold;
+}
