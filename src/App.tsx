@@ -1,3 +1,4 @@
+import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -7,12 +8,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="landing-page">
       <Navbar />
-      <Hero />
-      <Features />
-      <Integrations />
-      <CTA />
+      <main className="page-content">
+        <Hero />
+        <Features />
+        <Integrations />
+        <CTA />
+      </main>
       <Footer />
     </div>
   );

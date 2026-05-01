@@ -1,29 +1,135 @@
 .footer {
-  background: #111;
-  color: white;
-  padding: 40px 20px;
+  background: #16263d;
+  color: #c7d0df;
+  padding: 40px 0 22px;
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .footer-top {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer-brand img {
+  width: 140px;
+}
+
+.footer-brand p {
+  margin: 16px 0 0;
+  max-width: 240px;
+  color: #bdc8d8;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.footer-column h4 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-column a {
+  display: block;
+  margin: 7px 0;
+  color: #bdc8d8;
+  font-size: 14px;
+}
+
+.footer-app-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 156px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #6c7d95;
+  padding: 6px 10px;
+}
+
+.footer-app-badge img {
+  width: 15px;
+  height: 15px;
+}
+
+.footer-badge-small {
+  margin: 0;
+  color: #acb8ca;
+  font-size: 8px;
+  line-height: 1.1;
+}
+
+.footer-badge-big {
+  margin: 2px 0 0;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.footer-line {
+  height: 1px;
+  background: #2d3e56;
+  margin: 30px 0 16px;
+}
+
+.footer-bottom {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
 }
 
-.footer-links {
+.footer-bottom p {
+  margin: 0;
+  color: #acb8ca;
+  font-size: 13px;
+}
+
+.social-links {
   display: flex;
-  gap: 15px;
-  color: gray;
+  align-items: center;
+  gap: 8px;
 }
 
-.footer-links span {
-  cursor: pointer;
+.social-links a {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-  color: gray;
-  font-size: 14px;
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1040px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

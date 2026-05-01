@@ -1,37 +1,96 @@
 .navbar {
+  border-bottom: 1px solid #dce1e8;
+  background: #f5f6f9;
+}
+
+.navbar-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  height: 80px;
+  padding: 0 32px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
+  gap: 16px;
 }
 
-.logo {
+.navbar-left {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 22px;
 }
 
-.logo img {
-  width: 70px;
-  height: 30px;
+.navbar-logo img {
+  width: 154px;
+  height: auto;
 }
 
-.nav-links {
+.navbar-links {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  flex-direction: row;
+  gap: 18px;
+  color: #5c687a;
+  font-size: 13px;
 }
 
-.install-btn {
-  padding: 8px 16px;
-  background: #023047;
-  color: white;
+.navbar-links a {
+  display: flex;
+  align-items: center;
+}
+
+.small-arrow {
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.install-button {
   border: none;
-  border-radius: 5px;
+  background: #022f47;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
+@media (max-width: 950px) {
+  .navbar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    justify-content: space-between;
+  }
+
+  .navbar-left {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+
+  .navbar-links {
+    width: 100%;
+    padding-top: 4px;
+    justify-content: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-inner {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar-links {
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .install-button {
+    padding: 10px 14px;
+    font-size: 12px;
   }
 }

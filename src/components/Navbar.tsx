@@ -3,18 +3,26 @@ import logo from "../assets/logos/kobodrop_logo.svg";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="logo" />
+    <header className="navbar">
+      <div className="navbar-inner">
+        <div className="navbar-left">
+          <a className="navbar-logo" href="#">
+            <img src={logo} alt="Kobodrop logo" />
+          </a>
+
+          <nav className="navbar-links">
+            <a href="#learn">Learn</a>
+            <a href="#resources">
+              Resources <span className="small-arrow">\/</span>
+            </a>
+            <a href="#faqs">FAQs</a>
+          </nav>
+        </div>
+
+        <button type="button" className="install-button">
+          Install Kobodrop
+        </button>
       </div>
-
-      <ul className="nav-links">
-        <li>Learn</li>
-        <li>Resources</li>
-        <li>FAQs</li>
-      </ul>
-
-      <button className="install-btn">Install Kobodrop</button>
-    </nav>
+    </header>
   );
 }
